@@ -2,6 +2,7 @@
 
 import base64
 import hmac
+import hashlib
 import json
 import os
 import random
