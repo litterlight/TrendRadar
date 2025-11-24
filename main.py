@@ -158,7 +158,7 @@ def load_config():
     config["DINGTALK_WEBHOOK_URL"] = os.environ.get(
         "DINGTALK_WEBHOOK_URL", ""
     ).strip() or webhooks.get("dingtalk_url", "")
-        config["DINGTALK_SECRET"] = os.environ.get(
+    config["DINGTALK_SECRET"] = os.environ.get(
         "DINGTALK_SECRET", ""
     ).strip() or webhooks.get("dingtalk_secret", "")
     config["WEWORK_WEBHOOK_URL"] = os.environ.get(
