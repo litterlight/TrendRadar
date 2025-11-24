@@ -3616,9 +3616,7 @@ def send_to_dingtalk(
         secret_enc = secret.encode("utf-8")
         string_to_sign = f"{timestamp}\n{secret}"
         string_to_sign_enc = string_to_sign.encode("utf-8")
-        hmac_code = hmac.new(
-            secret_enc, string_to_sign_enc, digestmod=hmac.sha256
-        ).digest()
+        hmac_code = hmac.new(secret_enc, string_to_sign_enc, digestmod=hashlib.sha256).digest()
         sign = base64.b64encode(hmac_code).decode("utf-8")
         return timestamp, sign
 
